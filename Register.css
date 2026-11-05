@@ -1,0 +1,50 @@
+﻿/* Content/styles.css */
+form 
+{
+    height:800px;
+    width:1000px;
+    margin: 0 auto;
+    margin-top:0px;
+    padding: 20px;
+    border-right:10px solid black;
+    border-bottom:10px solid black;
+    background-color: white;
+
+    border-left:1px solid black;
+    border-top:1px solid black;
+}
+
+body
+{
+    font-weight:900;
+    background-color:white;
+    font-size:25px;    
+}
+Textbox
+{
+    width:80%; 
+    }
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight:900;
+    font-size:20px;
+}
+
+
+.form-header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#TextBox10
+{
+    width:50%
+    }
+    #TextBox1
+{
+    width:50%
+    }

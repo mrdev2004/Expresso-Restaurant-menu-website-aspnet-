@@ -1,0 +1,15 @@
+# Visual Studio / ASP.NET .gitignore
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+bin/
+obj/
+
+# Temporary files
+*.tmp
+*.log
+
+# SQL Server Database locks
+*.ldf

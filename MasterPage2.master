@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            width: 100%;
+            background-color: #343a40;
+            overflow: hidden;
+            border-bottom: 2px solid #ffc107;
+        }
+        .navbar h1 {
+            color: #ffc107;
+            float: left;
+            padding: 14px 20px;
+            text-align: center;
+            font-size: 1.5em;
+            margin: 0;
+            font-weight: 900;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            float: right;
+        }
+        .navbar ul li {
+            float: left;
+        }
+        .navbar ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar ul li a:hover {
+            background-color: #ffc107;
+            color: #343a40;
+            border-radius: 5px;
+        }
+        .side-nav {
+            background-color: #343a40;
+            height: 93%;
+            width: 280px;
+            position: fixed;
+            top:75px;
+            left: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        .side-nav a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+        }
+        .side-nav a:hover {
+            background-color: #ffc107;
+            color: #343a40;
+            border-radius: 5px;
+        }
+        .content {
+            margin-left: 300px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar">
+            <h1>Expresso's Restaurant</h1>
+            <ul>
+                <li> <a href="Home.aspx">Log Out</a></li>
+            </ul>
+        </div>
+        <div class="side-nav">
+            <a href="InsertData.aspx">Insert Data</a>
+            <a href="Viewitems.aspx">View Items</a>
+            <a href="users.aspx">View Users</a>
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:transparent;
+        }
+        .navbar {
+            width: 100%;
+            background-color:black;
+            overflow: hidden;
+            border-bottom:1px solid white;
+        }
+        .navbar h1 {
+            color: white;
+            float: left;
+            padding: 14px 20px;
+            text-align: center;
+            font-size: 1.5em;
+            margin: 0;
+            font-weight:900;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            float: right;
+        }
+        .navbar ul li {
+            float: left;
+        }
+        .navbar ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size:20px;
+        }
+        .navbar ul li a:hover 
+        {
+            border:1px solid white;
+        }
+        .main-content {
+            padding: 20px;
+            min-height: calc(100vh - 200px); /* Adjust height based on navbar and footer */
+        }
+        .footer {
+            background-color:black;
+            border-top:1px solid white;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer a {
+            color: #f8f9fa;
+            text-decoration: none;
+            font-size:18px;
+            font-weight:900;
+            font-family:Californian FB;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar">
+            <h1>Expresso's Restaurant&nbsp;
+           <asp:Label ID="lblWelcome" runat="server" ForeColor="white" Font-Bold="True" Font-Size="X-Large"></asp:Label>
+            &nbsp;<a href="Default.aspx"><asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="Button"   CssClass=btn-dark/>
+        </a>
+            </h1>
+            <ul>
+                <li><a href="Home.aspx">Home</a></li>
+                <li><a href="Menu.aspx">Menu</a></li>
+                <li><a href="About.aspx">About</a></li>
+                <li><a href="Contact.aspx">Contact</a></li>
+      <li id="RegisterLink" runat="server"><a href="Register.aspx">Register</a></li>
+    <li id="LoginLink" runat="server"><a href="Login.aspx">Login&nbsp;&nbsp;
+        </a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 Expresso's Restaurant. All Rights Reserved.</p>
+            <p>
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Service</a> | 
+                <a href="#">Contact Us</a>
+            </p>
+        </div>
+    </form>
+</body>
+</html>
